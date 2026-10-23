@@ -1,0 +1,20 @@
+
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: training-ingress
+  namespace: training-project
+spec:
+  podSelector:
+    matchLabels:
+      app: training-app
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: training-project
+      ports:
+        - protocol: TCP
+          port: 80

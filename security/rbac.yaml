@@ -1,0 +1,31 @@
+
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: training-reader
+  namespace: training-project
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: pod-reader
+  namespace: training-project
+rules:
+  - apiGroups: [""]
+    resources: ["pods"]
+    verbs: ["get", "list"]
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: training-reader-binding
+  namespace: training-project
+subjects:
+  - kind: ServiceAccount
+    name: training-reader
+    namespace: training-project
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: pod-reader
+

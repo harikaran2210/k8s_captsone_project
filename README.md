@@ -20,32 +20,45 @@ This project deploys an NGINX web application on a kubernetes cluster using helm
 - Horizontal Pod Autoscaler (HPA)
 - NetworkPolicy
 
-# Project Strucutre
+## Project Structure
 
+```text
 k8s_captsone_project/
-│
 ├── base/
 │   ├── Chart.yaml
 │   ├── values.yaml
-│   │
 │   └── templates/
 │       ├── deployment.yaml
 │       ├── service.yaml
 │       └── configmap.yaml
-│
 ├── security/
 │   ├── hpa.yaml
 │   ├── networkpolicy.yaml
 │   └── rbac.yaml
-│
 ├── storage/
 │   ├── pvc-test-pod.yaml
 │   └── training-pvc.yaml
-│
 ├── index.html
 └── README.md
+```
 
-# Prerequisites
+## File Structure and Description
+
+| File or folder | Purpose |
+|---|---|
+| `base/` | Helm chart for deploying the application |
+| `base/Chart.yaml` | Helm chart metadata |
+| `base/values.yaml` | Default Helm configuration values |
+| `base/templates/` | Kubernetes resource templates |
+| `security/hpa.yaml` | Horizontal Pod Autoscaler configuration |
+| `security/networkpolicy.yaml` | Network traffic restrictions |
+| `security/rbac.yaml` | ServiceAccount, Role, and RoleBinding configuration |
+| `storage/training-pvc.yaml` | PersistentVolumeClaim configuration |
+| `storage/pvc-test-pod.yaml` | Pod used to test persistent storage |
+| `index.html` | HTML page served by NGINX |
+| `README.md` | Project overview, setup instructions, and documentation |
+
+## Prerequisites
 
 **Install the following tools on your Linux machine or EC2 Ubuntu instance:**
 - Docker

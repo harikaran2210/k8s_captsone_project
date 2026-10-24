@@ -27,6 +27,7 @@ k8s_captsone_project/
 ├── base/
 │   ├── Chart.yaml
 │   ├── values.yaml
+│   │
 │   └── templates/
 │       ├── deployment.yaml
 │       ├── service.yaml
@@ -104,7 +105,7 @@ Keep the command running while accessing the application.
 
 Open:
 
-**http://<EC2-PUBLIC-IP>:30001**
+**http://15.20716.67:30001**
 
 Replace <EC2-PUBLIC-IP> with your EC2 instance's public IP address.
 

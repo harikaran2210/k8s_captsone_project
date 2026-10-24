@@ -221,18 +221,45 @@ helm rollback rel1 <REVISION>
 
 Replace <REVISION> with the revision you want to restore.
 
-**9. Observability and Troubleshooting**
+## 9. Observability and Troubleshooting
 
-Useful commands for inspecting application health, logs, events, and resource usage:
+Useful commands for inspecting application health, logs, events, and resource usage.
 
+**1. Get Pods**
+
+```bash
 kubectl get pods -n training-project
-kubectl describe pods -n training-project
-kubectl get events -n training-project \
-  --sort-by=.metadata.creationTimestamp
-kubectl logs deployment/training-app -n training-project
-kubectl top pods -n training-project
-kubectl top nodes
+```
 
+**2. Describe Pods**
+
+```bash
+kubectl describe pods -n training-project
+```
+
+**3. Get Events Sorted by Timestamp**
+
+```bash
+kubectl get events -n training-project --sort-by=.metadata.creationTimestamp
+```
+
+**4. View Application Logs**
+
+```bash
+kubectl logs deployment/training-app -n training-project
+```
+
+**5. Check Pod Resource Usage**
+
+```bash
+kubectl top pods -n training-project
+```
+
+**6. Check Node Resource Usage**
+
+```bash
+kubectl top nodes
+```
 **10. Network Security**
 
 Creates a NetworkPolicy named training-ingress to allow ingress TCP traffic on port 80 from Pods in the same namespace to the selected application Pods.

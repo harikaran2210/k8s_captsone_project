@@ -2,6 +2,7 @@
 A hands-on kubernetes capstone project demonstrating application deployment, configuration management, persistent storage, access control, autoscaling, release management, monitoring, and network security using minikube and helm.
 
 **Project Overview**
+
 This project deploys an NGINX web application on a Kubernetes cluster using helm. It demonstrates practical Kubernetes administration, including service exposure, health checks, scaling, security, persistent storage, and troubleshooting. The application serves a simple HTML page displaying:
 
 **Welcome to Capstone!**

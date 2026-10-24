@@ -60,17 +60,36 @@ k8s_captsone_project/
 
 ## Prerequisites
 
-**Install the following tools on your Linux machine or EC2 Ubuntu instance:**
+Install the following tools on your Linux machine or EC2 Ubuntu instance:
+
 - Docker
 - Minikube
 - kubectl
 - Helm 3
 
-**Verify the installation:**
-docker --version
-kubectl version --client
-minikube version
-helm version
+### Verify the Installation
+
+Run the following commands to verify that each tool is installed correctly:
+
+- **Docker**
+  ```bash
+  docker --version
+  ```
+
+- **kubectl**
+  ```bash
+  kubectl version --client
+  ```
+
+- **Minikube**
+  ```bash
+  minikube version
+  ```
+
+- **Helm**
+  ```bash
+  helm version
+  ```
 
 # Deployment Guide
 

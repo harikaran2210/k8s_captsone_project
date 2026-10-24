@@ -135,11 +135,13 @@ kubectl port-forward svc/training-service 30001:80 \
 
 Keep the command running while accessing the application.
 
-Open:
+Open the following URL in your browser:
 
-**http://15.20716.67:30001**
+```text
+http://<EC2-PUBLIC-IP>:30001
+```
 
-Replace <EC2-PUBLIC-IP> with your EC2 instance's public IP address.
+Replace `<EC2-PUBLIC-IP>` with your EC2 instance's public IP address.
 
 For EC2 access, allow TCP port 30001 only from trusted IP addresses in the instance's security group.
 
